@@ -1,0 +1,28 @@
+.logo-container {
+    width: 22vw;
+    height: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-image: url("../../../assets/images/back.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    top: 15%;
+    border: 10px solid rgb(72, 154, 221);
+    border-radius: 5px;
+    right: 15%;
+
+    img {
+        width: 28vw;
+        height: 30vw;
+        opacity: 1;
+    }
+}
+
+.svg-container {
+    stroke: #ffd700;
+    stroke-width: 10;
+}

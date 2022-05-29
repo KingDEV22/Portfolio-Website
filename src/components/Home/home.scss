@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
+.container {
+  .text-zone {
+    background: rgba(225, 223, 223, 0.315);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    position: absolute;
+    animation: fadeIn 1s;
+    padding: 1.3vw 0 1.3vw 2vw;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 93%;
+  }
+
+  h1 {
+    color: rgb(255, 179, 3);
+    font-size: 3.5vw;
+    line-height: 3.5vw;
+    letter-spacing: 2px;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+
+    img {
+      margin-bottom: -22px;
+      margin-right: -20px;
+      opacity: 0;
+      width: 92px;
+      height: auto;
+      animation: rotateIn 1s linear both;
+      animation-delay: 1.4s;
+    }
+  }
+
+  h2 {
+    color: #7a7878;
+    font-size: 1.2vw;
+    margin-top: 0.5vw;
+    font-weight: 400;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    animation: fadeIn 1s 1.8s backwards;
+  }
+
+  .flat-button {
+    border: 1px solid #000000;
+    color: #040404;
+    font-size: 0.9vw;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 1vw 1vh;
+    border-radius: 5px;
+    margin-top: 1.3vw;
+    float: left;
+    animation: fadeInAnimation 1s 1.8s backwards;
+    white-space: nowrap;
+
+    &:hover {
+      color: #054dea;
+      border: 1px solid #0e19f2;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    .text-zone {
+      position: absolute;
+      left: 18%;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    .text-zone {
+      width: 50%;
+      position: absolute;
+      left: 30%;
+    }
+
+    h1 {
+      font-size: 3vw;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: 1.5vw;
+    }
+  }
+}
+
+.area {
+  width: 100%;
+  height: 100vh;
+}
