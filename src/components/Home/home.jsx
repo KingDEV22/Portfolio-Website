@@ -10,19 +10,23 @@ const Home = () => {
 
   const nameArray = ['', 'K', 'i', 'n', 'g', 's', 'u', 'k']
   const jobArray = [
-    'D',
-    'a',
+    'S',
+    'o',
+    'f',
     't',
+    'w',
     'a',
+    'r',
+    'e',
     ' ',
-    'A',
+    'E',
     'n',
-    'a',
-    'l',
-    'y',
-    's',
-    't',
-    '.',
+    'g',
+    'i',
+    'n',
+    'e',
+    'e',
+    'r',
   ]
 
   useEffect(() => {
@@ -33,7 +37,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="container home-page">
+      <div className=" page-container">
         <div className="text-zone">
           <h1>
             <span className={letterClass}>H</span>
@@ -54,7 +58,7 @@ const Home = () => {
               idx={22}
             />
           </h1>
-          <h2>Data Analyst / Machine Learning</h2>
+          <h2>Java | Python</h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>
