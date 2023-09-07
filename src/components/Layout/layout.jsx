@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../Sidebar/slidebar'
 import './layout.scss'
-import '../Home/home.scss'
+// import '../Home/home.scss'
 
 const Layout = () => {
   return (

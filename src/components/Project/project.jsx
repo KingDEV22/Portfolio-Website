@@ -2,61 +2,20 @@ import React, { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters/animateLetters'
 import Loader from 'react-loaders'
 import './project.scss'
-import {
-  BashOriginal,
-  COriginal,
-  JavaOriginal,
-  PythonOriginal,
-  JavascriptOriginal,
-  Html5Original,
-  Css3Original,
-  SpringOriginal,
-  FlaskOriginal,
-  ExpressOriginal,
-  NodejsOriginal,
-  ReactOriginal,
-  MysqlOriginal,
-  PostgresqlOriginal,
-  MongodbOriginal,
-  AnacondaOriginal,
-  JupyterOriginal,
-  LinuxOriginal,
-  KotlinPlain,
-  AndroidstudioOriginal,
-  DockerOriginal,
-  GitOriginal,
-} from 'devicons-react'
-import { Container, Row, Col } from 'react-grid-system'
-import FoodApp from '../../assets/images/foodapp.jpg'
-import Portfolio from '../../assets/images/portfolio.png'
-import Medical from '../../assets/images/medical.png'
+import { projectsData } from '../../utils/icons'
+import { Link } from 'react-router-dom'
 const Project = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const iconArray = [
-    { name: 'C', component: COriginal },
-    { name: 'Bash', component: BashOriginal },
-    { name: 'Java', component: JavaOriginal },
-    { name: 'Python', component: PythonOriginal },
-    { name: 'Html5', component: Html5Original },
-    { name: 'Css3', component: Css3Original },
-    { name: 'Javascript', component: JavascriptOriginal },
-    { name: 'React', component: ReactOriginal },
-    { name: 'Nodejs', component: NodejsOriginal },
-    { name: 'Express', component: ExpressOriginal },
-    { name: 'Spring', component: SpringOriginal },
-    { name: 'Flask', component: FlaskOriginal },
-    { name: 'Mysql', component: MysqlOriginal },
-    { name: 'Postgresql', component: PostgresqlOriginal },
-    { name: 'Mongodb', component: MongodbOriginal },
-    { name: 'Git', component: GitOriginal },
-    { name: 'Docker', component: DockerOriginal },
-    { name: 'Anaconda', component: AnacondaOriginal },
-    { name: 'Jupyter', component: JupyterOriginal },
-    { name: 'Linux', component: LinuxOriginal },
-    { name: 'Kotlin', component: KotlinPlain },
-    { name: 'Android', component: AndroidstudioOriginal },
-  ]
-  const [show, setShow] = useState(true)
+  const projectLetters = ['P', 'r', 'o', 'j', 'e', 'c', 't', 's']
+  const [displayStart, setDisplayStart] = useState(0)
+  const itemsPerPage = 3
+
+  const handleNextClick = () => {
+    setDisplayStart(displayStart + itemsPerPage)
+  }
+  const handlePrevClick = () => {
+    setDisplayStart(displayStart - itemsPerPage)
+  }
   useEffect(() => {
     return setTimeout(() => {
       setLetterClass('text-animate-hover')
@@ -66,108 +25,48 @@ const Project = () => {
     <>
       <div className="page-container">
         <div className="about-details">
-          {show && (
-            <>
-              <h1>
-                <AnimatedLetters
-                  letterClass={letterClass}
-                  strArray={['S', 'k', 'i', 'l', 'l', 's']}
-                  idx={15}
-                />
-              </h1>
-              <Container style={{ padding: '1vw', marginTop: '1vw' }}>
-                <Row>
-                  {iconArray.map((Icon, ind) => (
-                    <Col key={ind} sm={2}>
-                      <div
-                        style={{
-                          display: 'flex',
-                          justifyContent: 'center',
-                          flexDirection: 'column',
-                          alignItems: 'center',
-                          padding: '0.3vw',
-                        }}
-                      >
-                        {React.createElement(Icon.component, { size: '3vw' })}{' '}
-                        <p>{Icon.name}</p>
-                      </div>
-                    </Col>
-                  ))}
-                </Row>
-              </Container>
-            </>
-          )}
-          {!show && (
-            <>
-              <h1>
-                <AnimatedLetters
-                  letterClass={letterClass}
-                  strArray={['P', 'r', 'o', 'j', 'e', 'c', 't', ':']}
-                  idx={15}
-                />
-              </h1>
-              <div className="project">
-                <div className="wrapper">
-                  <div className="project-card">
-                    <img src={Portfolio} alt="" className="spring" />
+          <h1>
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={projectLetters}
+              idx={15}
+            />
+          </h1>
+          <div className="project">
+            <div className="wrapper">
+              {projectsData
+                .slice(displayStart, displayStart + itemsPerPage)
+                .map((item, index) => (
+                  <div className="project-card" key={index}>
+                    <img src={item.image} alt="" />
+                    <h3>{item.title}</h3>
+                    <div className="project-info">
+                      
+                      <p>{item.desc}</p>
+                      <a href={item.link} className="flat-button">
+                        Read More
+                      </a>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
 
-                    <div className="project-info">
-                      <h3>Portfolio Website</h3>
-                      <p>
-                        A portfolio website built using React and SCSS to my qualifications.
-                      </p>
-                      <a
-                        href="https://github.com/KingDEV22/Portfolio-Website"
-                        className="flat-button"
-                      >
-                        Read More
-                      </a>
-                    </div>
-                  </div>
-                  <div className="project-card">
-                    <img src={Medical} alt="" className="spring" />
-                    <div className="project-info">
-                      <h3>Medical Insurance Prediction</h3>
-                      <p>
-                        Built a machine learning model to predict medical insurance prices of an individual.
-                      </p>
-                      <a
-                        href="https://github.com/KingDEV22/Medical-Price-Prediction"
-                        className="flat-button"
-                      >
-                        Read More
-                      </a>
-                    </div>
-                  </div>
-                  <div className="project-card">
-                    <img src={FoodApp} alt="" className="spring" />
-
-                    <div className="project-info">
-                      <h3>Food Delevery App</h3>
-                      <p>
-                        Developed a food delivery app for android to order foods from restaurant.
-                      </p>
-                      <a
-                        href="https://github.com/KingDEV22/Food-Delevery-App.git"
-                        className="flat-button"
-                      >
-                        Read More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </>
-          )}
           <div className="button-container">
-            {!show && (
-              <button className="flat-button" onClick={() => setShow(!show)}>
+            {displayStart !== 0 && (
+              <button className="flat-button" onClick={handlePrevClick}>
                 MOVE BACK
               </button>
             )}
-            <button className="flat-button" onClick={() => setShow(!show)}>
-              KNOW MORE
-            </button>
+            {displayStart !== 6 ? (
+              <button className="flat-button" onClick={handleNextClick}>
+                {displayStart > 0 ? 'MOVE NEXT' : 'KNOW MORE'}
+              </button>
+            ) : (
+              <Link to="/about" className="flat-button">
+                KNOW MORE
+              </Link>
+            )}
           </div>
         </div>
       </div>

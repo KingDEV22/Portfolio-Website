@@ -8,14 +8,13 @@
   width: 80%;
   background: rgba(225, 223, 223, 0.315);
   box-shadow: 0 4px 13px 0 rgba(88, 88, 95, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 2px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
   padding: 1rem;
 
-
-  .button-container{
+  .button-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,10 +22,8 @@
     padding: 1rem;
   }
 
-
-
-  .education{
-    h1{
+  .education {
+    h1 {
       text-align: center;
       padding: 1rem 0;
     }
@@ -39,7 +36,8 @@ h3 {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
 }
-h4,p {
+h4,
+p {
   color: rgba(74, 74, 74, 0.804);
   font-size: 1.3vw;
   letter-spacing: 1px;
@@ -53,7 +51,6 @@ h4,p {
     height: 100%;
     position: relative;
     padding: 2rem;
-
   }
 }
 
@@ -81,15 +78,12 @@ h4,p {
     position: absolute;
     width: 12vw;
     height: 12vw;
-    border: 1px solid rgb(228, 172, 16);
-    background: rgba(245, 245, 245, 0.581);
-    text-align: center;
-    font-size: 4vw;
+    border: 1px solid rgb(83, 81, 73);
+    background: rgba(221, 221, 221, 0.192);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 20px 0px lightyellow;
-
+    box-shadow: 0 0 20px 0px rgb(128, 128, 127);
     img {
       width: 5vw;
       height: 5vw;
@@ -98,40 +92,31 @@ h4,p {
 
   .face1 {
     transform: translateZ(6.1vw);
-    // color: linear-gradient(45deg, rgb(224, 218, 45), rgb(70, 136, 242));
   }
 
   .face2 {
     transform: rotateY(90deg) translateZ(6.1vw);
     animation: displayReverse 15s infinite;
-    //animation-delay: 6s;
     opacity: 0;
-    color: #f06529;
   }
 
   .face3 {
     transform: rotateY(90deg) rotateX(90deg) translateZ(6.1vw);
-    color: #28a4d9;
   }
 
   .face4 {
     transform: rotateY(180deg) rotateZ(-90deg) translateZ(6.1vw);
-    color: #5ed4f4;
   }
 
   .face5 {
     transform: rotateY(-90deg) rotateZ(90deg) translateZ(6.1vw);
-    color: #efd81d;
     animation: displayReverse 8s infinite;
-    //animation-delay: 6s;
     opacity: 0;
   }
 
   .face6 {
     transform: rotateX(-90deg) translateZ(6.1vw);
-    color: #ec4d28;
     animation: displayReverse 8s infinite;
-    // animation-delay: 6s;
     opacity: 0;
   }
 
@@ -139,19 +124,16 @@ h4,p {
     transform: rotateY(90deg) translateZ(6.1vw);
     animation: displayIcon 8s infinite;
     opacity: 0;
-    //animation-delay: 8s;
   }
 
   .face8 {
     transform: rotateY(-90deg) rotateZ(90deg) translateZ(6.1vw);
-    //color: #28a4d9;
     animation: displayIcon 8s infinite;
     opacity: 0;
   }
 
   .face9 {
     transform: rotateX(-90deg) translateZ(6.1vw);
-    color: #70ec28;
     animation: displayIcon 8s infinite;
     opacity: 0;
   }
@@ -239,7 +221,6 @@ h4,p {
     transform-origin: 19vw 20vw 0;
   }
 }
-
 
 @media only screen and (max-width: 560px) {
   .stage-cube-cont {

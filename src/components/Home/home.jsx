@@ -59,16 +59,21 @@ const Home = () => {
             />
           </h1>
           <h2>Java | Python</h2>
-          <Link to="/contact" className="flat-button">
+          
+          <Link to="/about" className="flat-button" style={{margin:'0 1rem'}}>
+            KNOW MORE
+          </Link>
+          <Link to="/contact" className="flat-button" style={{margin:'0 1rem'}}>
             CONTACT ME
           </Link>
         </div>
         <Logo />
       </div>
-      {/* <CometSpinLoader /> */}
       <Loader type="line-spin-fade-loader" />
     </>
   )
 }
 
 export default Home
+
+
