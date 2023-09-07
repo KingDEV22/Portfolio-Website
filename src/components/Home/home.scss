@@ -9,35 +9,36 @@
   height: 100%;
   width: 80%;
   .text-zone {
-    background: rgba(225, 223, 223, 0.315);
-    box-shadow: 0 8px 32px 0 rgba(136, 139, 102, 0.37);
+    background: rgba(255, 255, 255, 0.168);
+    box-shadow: 0 8px 32px 0 rgba(153, 155, 136, 0.601);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 10px;
     animation: fadeIn 1s;
     padding: 1.5rem;
+    margin: 1rem;
     width: 50%;
     max-height: 93%;
   }
   h2,
   p {
-    color: #7a7878;
+    color: #4f4646;
     font-size: 1.2vw;
     margin-top: 0.5vw;
     font-weight: 400;
     font-family: sans-serif;
     letter-spacing: 3px;
-    animation: fadeIn 1s 1s backwards;
+    animation: fadeIn 0.5s 0.5s backwards;
   }
 }
 
 .flat-button {
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   color: #040404;
   font-size: 0.9vw;
   background: none;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 3px;
   font-family: sans-serif;
   text-decoration: none;
@@ -45,12 +46,12 @@
   border-radius: 5px;
   margin-top: 1vw;
   float: left;
-  animation: fadeInAnimation 1s 1.2s backwards;
+  animation: fadeIn 0.5s 0.5s backwards;
   white-space: nowrap;
 
   &:hover {
-    color: #054dea;
-    border: 1px solid #0e19f2;
+    color: #b1b4bd;
+    border: 2px solid #b1b4bd;
   }
 }
 
@@ -63,19 +64,57 @@ h1 {
   font-weight: 400;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .page-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 80%;
+    height: 100%;
     flex-direction: column-reverse;
     .text-zone {
-      padding: 1rem;
-      margin: 5rem 0;
+      padding: 2rem;
+      margin: 2rem 0;
+      width: 80%;
+      // height: 30vw;
+    }
+    h1 {
+      font-size: 5vw;
+      line-height: 5.5vw;
+      letter-spacing: 4px;
+    }
+    h2,
+    p {
+      font-size: 1.5vw;
     }
   }
 }
+
+// @media (max-width: 500px) {
+//   .page-container {
+//     .text-zone {
+//       padding: 2rem;
+//       margin: 2rem 0;
+//       width: 60vw;
+//       height: 30vw;
+//     }
+//     h1 {
+//       font-size: 5vw;
+//       line-height: 5.5vw;
+//       letter-spacing: 4px;
+//     }
+//     h2,
+//     p {
+//       font-size: 1.5vw;
+//       margin-top: 0.5vw;
+//       font-weight: 400;
+//       font-family: sans-serif;
+//       letter-spacing: 3px;
+//       animation: fadeIn 1s 1s backwards;
+//     }
+//   }
+// }
 
 // @media only screen and (max-width: 500px) {
 //   .container {

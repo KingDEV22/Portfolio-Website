@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Loader from 'react-loaders'
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -32,9 +31,7 @@ export default function Education() {
             <AnimatedLetters
               letterClass={letterClass}
               strArray={
-                //   show == 2
                 ['E', 'd', 'u', 'c', 'a', 't', 'i', 'o', 'n']
-                // : ['E', 'x', 'p', 'e', 'r', 'i', 'e', 'n', 'c', 'e']
               }
               idx={15}
             />
@@ -53,8 +50,7 @@ export default function Education() {
                 contentArrowStyle={{
                   borderRight: '7px solid  rgba(79, 78, 78, 0.744)',
                 }}
-                date={data.date}
-                iconStyle={{ background: '#ffff' }}
+                iconStyle={{ background: '#ffff', color:'#000000' }}
                 icon={data.icon}
               >
                 <h3 className="vertical-timeline-element-title">
@@ -63,7 +59,7 @@ export default function Education() {
                 <h4 className="vertical-timeline-element-subtitle">
                   {data.subtitle}
                 </h4>
-                <p style={{ fontSize: '1vw' }}>{data.detailedText}</p>
+                <p style={{ fontSize: '1vw' }}>{data.date} <br /> {data.detailedText}</p>
               </VerticalTimelineElement>
             ))}
           </VerticalTimeline>
@@ -72,7 +68,6 @@ export default function Education() {
           KNOW MORE
         </Link>
       </div>
-      <Loader type="line-spin-fade-loader" />
     </div>
   )
 }

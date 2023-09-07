@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters/animateLetters'
-import Loader from 'react-loaders'
+import { motion } from 'framer-motion'
 import './project.scss'
 import { iconArray } from '../../utils/icons'
 import { Container, Row, Col } from 'react-grid-system'
@@ -24,10 +24,10 @@ const Skill = () => {
               idx={15}
             />
           </h1>
-          <Container style={{ padding: '1vw', marginTop: '1vw' }}>
+          <Container>
             <Row>
               {iconArray.map((Icon, ind) => (
-                <Col key={ind} sm={2}>
+                <Col key={ind} sm={3} md={2} xs={4}>
                   <div
                     style={{
                       display: 'flex',
@@ -37,7 +37,14 @@ const Skill = () => {
                       padding: '0.3vw',
                     }}
                   >
-                    {React.createElement(Icon.component, { size: '3vw' })}{' '}
+                    <motion.span
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 1 }}
+                      
+                    >
+                      {React.createElement(Icon.component, { size: '3vw' })}
+                    </motion.span>
                     <p>{Icon.name}</p>
                   </div>
                 </Col>
@@ -45,11 +52,10 @@ const Skill = () => {
             </Row>
           </Container>
           <Link to="/project" className="flat-button">
-          KNOW MORE
-        </Link>
+            KNOW MORE
+          </Link>
         </div>
       </div>
-      <Loader type="line-spin-fade-loader" />
     </>
   )
 }

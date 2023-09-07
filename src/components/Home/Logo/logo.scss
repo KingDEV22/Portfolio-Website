@@ -1,14 +1,14 @@
 .logo-container {
-    width: 15vw;
-    height: 20vw;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    // top: 20%;
     border: 10px solid rgb(72, 154, 221);
     border-radius: 5px;
-    // right: 15%;
 
     img {
         width: 15vw;

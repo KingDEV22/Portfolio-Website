@@ -30,15 +30,15 @@ import Database from '../assets/images/database.png'
 import Stock from '../assets/images/stock.jpg'
 import CLI from '../assets/images/cli.jpg'
 import {
-  faGraduationCap,
-  faSchool,
-  faUser,
-  faBuilding,
-  faToolbox,
-  faProjectDiagram,
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAmazon } from '@fortawesome/free-brands-svg-icons'
+  FaUser,
+  FaGraduationCap,
+  FaAmazon,
+  FaTools,
+  FaSchool,
+  FaProjectDiagram,
+} from 'react-icons/fa'
+
+import { MdWork ,MdPermContactCalendar} from 'react-icons/md'
 
 export const iconArray = [
   { name: 'C', component: COriginal },
@@ -66,11 +66,12 @@ export const iconArray = [
 ]
 
 export const navLinks = [
-    {icon : <FontAwesomeIcon icon={faUser} />, name : 'about' },
-    {icon : <FontAwesomeIcon icon={faGraduationCap} />, name : 'education' },
-    {icon : <FontAwesomeIcon icon={faBuilding} />, name : 'experience'},
-    {icon : <FontAwesomeIcon icon={faToolbox} />, name : 'skill'},
-    {icon : <FontAwesomeIcon icon={faProjectDiagram} />, name: 'project'},
+  { icon: <FaUser />, name: 'about' },
+  { icon: <FaSchool />, name: 'education' },
+  { icon: <MdWork />, name: 'experience' },
+  { icon: <FaTools />, name: 'skill' },
+  { icon: <FaProjectDiagram />, name: 'project' },
+  { icon: <MdPermContactCalendar />, name: 'contact' },
 ]
 
 export const iconsphere = [
@@ -136,26 +137,22 @@ export const persData = [
     title: 'B-Tech',
     subtitle: 'Computer Science and Engineering',
     detailedText: `Narula Institute of Technology, Kolkata, West Bengal`,
-    icon: <FontAwesomeIcon icon={faGraduationCap} />,
+    icon: <FaGraduationCap />,
   },
   {
     date: '2018 - 2019',
     title: 'High School',
     subtitle: `Science`,
     detailedText: `Sudhir Memorial Institute, Kolkata, West Bengal`,
-    icon: <FontAwesomeIcon icon={faSchool} />,
+    icon: <FaSchool />,
   },
   {
-    data: 'Jan 2023 - Jun 2023',
+    date: 'Jan 2023 - Jun 2023',
     title: 'Support Engineer II Intern',
     subtitle: 'Amazon , India',
-    detailedText: `- Worked on deployment of various services of Just Walk
-      Out Technology (JWO) stores' infrastructure.
-      ${(<br />)}
-      - Collaborated with cross-functional teams to effectively
-      troubleshoot and debug errors in the services. ${(<br />)}
-      -Implemented automation scripts and optimized packages for
-      seamless data flow during service deployment.`,
-    icon: <FontAwesomeIcon icon={faAmazon} />,
+    detailedText: `I contributed significantly to deploying diverse services within Amazon India's Just Walk Out Technology (JWO) 
+    store infrastructure, collaborated with cross-functional teams to troubleshoot 
+    and debugged errors, implemented automation script and optimised package.`,
+    icon: <FaAmazon />,
   },
 ]
