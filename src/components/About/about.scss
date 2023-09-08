@@ -30,7 +30,7 @@
 }
 
 h3 {
-  font-size: 1.5vw;
+  font-size: 2vw;
   letter-spacing: 2px;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -38,7 +38,7 @@ h3 {
 h4,
 p {
   color: rgba(74, 74, 74, 0.804);
-  font-size: 1.3vw;
+  font-size: 1.5vw;
   letter-spacing: 1px;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -205,25 +205,58 @@ p {
     padding: 0 2rem;
   }
 }
+@media (max-width: 1165px) {
+  .about-details{
+    width: 70vw;
+    margin: 0;
+    height: auto;
+  }
+  .education {
+   h3{
+    font-size: 3.5vw;
+   }
+   h4,p{
+    font-size: 2.5vw;
+    color: rgb(25, 23, 23);
+   }
+  }
+}
+@media (max-width: 650px) {
+  .about-details{
+    width: 65vw;
+  }
+  .education {
+   h3{
+    font-size: 3vw;
+   }
+   h4,p{
+    font-size: 2vw;
+    color: rgb(25, 23, 23);
+   }
+  }
+}
 
 @media (max-width: 1500px) {
   .page-container {
     flex-direction: column-reverse;
     justify-content: center;
-    .text-zone {
-      padding: 2rem;
-      margin: 0 auto;
-      width: 80%;
-      h1 {
-        font-size: 5vw;
-        line-height: 5vw;
-        letter-spacing: 4px;
-      }
+    .text-zone{
+      width: 70vw;
+      height: auto;
+      margin-top: 6rem;
+    }
+    h1 {
+      font-size: 6vw;
+      line-height: 5vw;
+      letter-spacing: 4px;
     }
     h2,
     p {
+      font-size: 2.5vw;
+    }.flat-button {
       font-size: 2vw;
     }
+    
     .stage-cube-cont {
       width: 80%;
       height: 40%;
@@ -238,6 +271,17 @@ p {
 }
 
 @media screen and (min-width: 1166px) and (max-width: 1499px) {
+  .education {
+    width: 60vw;
+    height: auto;
+    h3{
+      font-size: 3vw;
+     }
+     h4{
+      font-size: 2vw;
+
+     }
+  }
 }
 
 @media screen and (max-width: 1500px) {

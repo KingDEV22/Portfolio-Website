@@ -10,11 +10,24 @@ import AnimatedLetters from '../AnimatedLetters/animateLetters'
 import { Link } from 'react-router-dom'
 export default function Education() {
   const [letterClass, setLetterClass] = useState('text-animate')
+  const pfont = determineFontSize()
+ function determineFontSize(){
+    if(window.innerWidth < 1166){
+      return '2.5vw'
+    }else if( window.innerWidth >=1166 && window.innerWidth <1499){
+      return '2vw'
+    }else{
+      return '1vw'
+    }
+  }
+
+
   useEffect(() => {
     return setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
   }, [])
+
   return (
     <div className="page-container">
       <div className="about-details">
@@ -59,7 +72,7 @@ export default function Education() {
                 <h4 className="vertical-timeline-element-subtitle">
                   {data.subtitle}
                 </h4>
-                <p style={{ fontSize: '1vw' }}>{data.date} <br /> {data.detailedText}</p>
+                <p style={{ fontSize: `${pfont}` }}>{data.date} <br /> {data.detailedText}</p>
               </VerticalTimelineElement>
             ))}
           </VerticalTimeline>

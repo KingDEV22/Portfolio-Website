@@ -29,7 +29,6 @@
     font-weight: 400;
     font-family: sans-serif;
     letter-spacing: 3px;
-    animation: fadeIn 0.5s 0.5s backwards;
   }
 }
 
@@ -70,23 +69,27 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 80%;
-    height: 100%;
     flex-direction: column-reverse;
     .text-zone {
-      padding: 2rem;
-      margin: 2rem 0;
-      width: 80%;
-      // height: 30vw;
-    }
-    h1 {
-      font-size: 5vw;
-      line-height: 5.5vw;
-      letter-spacing: 4px;
+      margin: 2rem;
+      width: 80vw;
+      height: auto;
     }
     h2,
     p {
-      font-size: 1.5vw;
+      font-size: 3vw;
+    }.flat-button {
+      font-size: 2.5vw;
+    }
+    .logo-container{
+      width: 50vw;
+      height: 30vw;
+      margin-bottom: 3rem;
+      // border: 1px solid black;
+      img{
+        width: 20vw;
+        height: 30vw;
+      }
     }
   }
 }

@@ -24,3 +24,8 @@ body {
     background-position: 0% 50%;
   }
 }
+
+:root {
+  --animate-duration: 2s;
+  --animate-delay: 0.9s;
+}

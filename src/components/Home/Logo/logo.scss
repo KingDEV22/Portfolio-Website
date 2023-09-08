@@ -2,18 +2,18 @@
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-left:2rem;
     background-size: cover;
+    background-image: url('../../../assets/images/profile.svg');
     background-repeat: no-repeat;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 10px solid rgb(72, 154, 221);
     border-radius: 5px;
 
     img {
         width: 15vw;
         height: 20vw;
-        opacity: 1;
+        object-fit: cover;
     }
 }
 

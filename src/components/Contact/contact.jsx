@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters/animateLetters'
-import '../About/about.scss'
-import '../Home/home.scss'
 import './contact.scss'
 import {motion} from 'framer-motion' 
 import { IoMdMail } from 'react-icons/io'
@@ -9,14 +7,6 @@ import { IoMdMail } from 'react-icons/io'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-
-  const svgVariants={
-    hidden : { scale : 0.8},
-    visible : {
-        scale : 1, 
-        transition : { duration : 1}
-    }
-  }
 
   const pathVariants = {
     hidden: {
@@ -39,7 +29,7 @@ const Contact = () => {
   }, [])
 
   return (
-    <div className="page-container">
+    <div className="page-container contact-page">
       <div className="text-zone">
         <h1>
           <AnimatedLetters
@@ -49,7 +39,7 @@ const Contact = () => {
           />
         </h1>
 
-        <p>
+        <p className='animate__animated animate__fadeIn'>
           Thank You for visiting my portfolio website. <br />I am actively
           seeking opportunities as <strong>Software Engineer</strong>,{' '}
           <strong>Backend Developer</strong>,
@@ -60,10 +50,10 @@ const Contact = () => {
           <br />
           Feel free to get in touch with me!
         </p>
-        <div className="connect">
-          <h4>Connect with me: </h4>
-          <h5>kingsuk2k@gmail.com</h5>
-          <IoMdMail size={'2rem'} />
+        <div className="connect animate__animated animate__fadeIn">
+          <h4 className='animate__animated animate__fadeIn'>Connect with me: </h4>
+          <h5 className='animate__animated animate__fadeIn'>kingsuk2k@gmail.com</h5>
+          <IoMdMail size={'2.5vw'} />
         </div>
       </div>
       <div className="contact-img">
@@ -73,7 +63,7 @@ const Contact = () => {
           viewBox="0 0 785 589"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          variants={svgVariants}
+          
           initial = "hidden"
           animate = "visible"
         >

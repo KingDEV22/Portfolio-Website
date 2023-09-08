@@ -3,11 +3,13 @@ import AnimatedLetters from '../AnimatedLetters/animateLetters'
 import { motion } from 'framer-motion'
 import './project.scss'
 import { iconArray } from '../../utils/icons'
+import 'animate.css'
 import { Container, Row, Col } from 'react-grid-system'
 import { Link } from 'react-router-dom'
 const Skill = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const skillLetters = ['S', 'k', 'i', 'l', 'l', 's']
+  const pfont = window.innerWidth < 1000 ? '6vw':'3vw'
   useEffect(() => {
     return setTimeout(() => {
       setLetterClass('text-animate-hover')
@@ -24,7 +26,7 @@ const Skill = () => {
               idx={15}
             />
           </h1>
-          <Container>
+          <Container className='skill-set'>
             <Row>
               {iconArray.map((Icon, ind) => (
                 <Col key={ind} sm={3} md={2} xs={4}>
@@ -43,9 +45,9 @@ const Skill = () => {
                       transition={{ duration: 1 }}
                       
                     >
-                      {React.createElement(Icon.component, { size: '3vw' })}
+                      {React.createElement(Icon.component, { size: `${pfont}` })}
                     </motion.span>
-                    <p>{Icon.name}</p>
+                    <p class="animate__animated animate__fadeIn">{Icon.name}</p>
                   </div>
                 </Col>
               ))}

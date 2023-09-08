@@ -1,25 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters/animateLetters'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 import './project.scss'
 import { projectsData } from '../../utils/icons'
 import { Link } from 'react-router-dom'
+import 'animate.css'
 const Project = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const projectLetters = ['P', 'r', 'o', 'j', 'e', 'c', 't', 's']
   const [displayStart, setDisplayStart] = useState(0)
   const [itemsPerPage, setItemsPerPage] = useState(determineItemsPerPage())
 
-  const svgVariants={
-    hidden : { opacity : 0},
-    visible : {
-        opacity : 1, 
-        transition : { duration : 1}
-    }
-  }
   function determineItemsPerPage() {
     const screenWidth = window.innerWidth
-    if (screenWidth <= 550) {
+    if (screenWidth <= 650) {
       return 1 // Display one project card for screen width <= 550px
     } else if (screenWidth <= 1200) {
       return 2 // Display two project cards for screen width <= 1000px
@@ -69,12 +63,9 @@ const Project = () => {
               {projectsData
                 .slice(displayStart, displayStart + itemsPerPage)
                 .map((item, index) => (
-                  <motion.div
-                    className="project-card"
+                  <div
+                    className="project-card animate__animated animate__zoomIn"
                     key={index}
-                    variants={svgVariants}
-                    initial="hidden"
-                    animate="visible"
                   >
                     <img src={item.image} alt="" />
                     <h3>{item.title}</h3>
@@ -84,7 +75,7 @@ const Project = () => {
                         Read More
                       </a>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
             </div>
           </div>

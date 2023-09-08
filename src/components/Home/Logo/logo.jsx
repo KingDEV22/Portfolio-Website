@@ -4,32 +4,18 @@ import './logo.scss'
 import { motion } from 'framer-motion'
 
 const Logo = () => {
-  // const svgVariants = {
-  //   hidden: { : -90 , scale: 0.8 },
-  //   visible: {
-  //     scale: 1,
-  //     rotate : 0,
-  //     transition: { duration: 1 },
-  //   },
-  // }
+  const svgVariants = {
+    hidden: { scale: 0.8 },
+    visible: {
+      scale: 1,
+      transition: { duration: 1 },
+    },
+  }
   return (
-    <div className="logo-container">
-      {/* <img src={LogoS} alt="JavaScript,  Developer" /> */}
-      <motion.svg
-        xmlns="http://www.w3.org/2000/svg"
-        version="1.1"
-        width="585"
-        height="389"
-        viewBox="0 0 600 600"
-        animate={{ x: 100 }}
-        transition={{ type: 'spring', stiffness: 100 , duration : 1}}
-      >
-        <motion.path
-          d="M76.7259292602539,376.09832763671875C31.35458755493164,298.69247086842853,37.36923599243164,88.31066830952963,83.7865982055664,31.69455909729004C130.20396041870117,-24.921550114949547,282.0083478291829,20.449790000915527,355.2301025390625,36.40167236328125C428.4518572489421,52.35355472564697,500.1045735677083,64.25208536783853,523.1171264648438,127.40585327148438C546.1296793619791,190.55962117513022,521.1558329264323,353.87030537923175,493.305419921875,415.32427978515625C465.4550069173177,476.77825419108075,425.4445635477702,502.6673583984375,356.0146484375,496.12969970703125C286.5847333272298,489.592041015625,122.09727096557617,453.50418440500897,76.7259292602539,376.09832763671875C31.35458755493164,298.69247086842853,37.36923599243164,88.31066830952963,83.7865982055664,31.69455909729004"
-          fill="hsl(50, 98%, 80%)"
-        />
-      </motion.svg>
-    </div>
+    <motion.div className="logo-container" initial='hidden' animate='visible' variants={svgVariants}>
+      <img src={LogoS} alt="JavaScript,  Developer" />
+      
+    </motion.div>
   )
 }
 
