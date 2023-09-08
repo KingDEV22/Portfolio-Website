@@ -51,7 +51,7 @@ const Contact = () => {
           Feel free to get in touch with me!
         </p>
         <div className="connect animate__animated animate__fadeInUp">
-          <h4 className='animate__animated animate__fadeIn'>Connect with me: </h4>
+          <h4 className='animate__animated animate__fadeIn'>Connect: </h4>
           <h4 className='animate__animated animate__fadeIn' style={{padding: '1rem' ,color:'#ffff'}}>kingsuk2k@gmail.com</h4>
           <IoMdMail size={'2vw'} />
         </div>

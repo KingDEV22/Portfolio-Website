@@ -88,11 +88,16 @@
     height: 108vh;
     position: absolute;
 
+    .logo > img{
+      width: 10vw;
+      height: auto;
+    }
     nav {
       a {
         font-size: 3vw;
         height: 6vh;
       }
+      
     }
       ul {
         padding-bottom: 1rem;
@@ -119,6 +124,11 @@
         // line-height: 0;
         height: 5vh;
       }
+      
+    }
+    .logo > img{
+      width: 10vw;
+      height: auto;
     }
 
     ul {
