@@ -4,6 +4,7 @@ import AnimatedLetters from '../AnimatedLetters/animateLetters'
 import './project.scss'
 import { projectsData } from '../../utils/icons'
 import { Link } from 'react-router-dom'
+import { motion} from 'framer-motion'
 import 'animate.css'
 const Project = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -11,15 +12,17 @@ const Project = () => {
   const [displayStart, setDisplayStart] = useState(0)
   const [itemsPerPage, setItemsPerPage] = useState(determineItemsPerPage())
 
+
   function determineItemsPerPage() {
     const screenWidth = window.innerWidth
     if (screenWidth <= 650) {
       return 1 // Display one project card for screen width <= 550px
-    } else if (screenWidth <= 1200) {
+    }   else if (screenWidth <= 1200) {
       return 2 // Display two project cards for screen width <= 1000px
     } else {
       return 3 // Display three project cards for larger screens
     }
+  
   }
 
   const handleNextClick = () => {

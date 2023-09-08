@@ -71,10 +71,6 @@ p {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 20px 0px rgb(128, 128, 127);
-    img {
-      width: 5vw;
-      height: 5vw;
-    }
   }
 
   .face1 {
@@ -205,45 +201,54 @@ p {
     padding: 0 2rem;
   }
 }
-@media (max-width: 1165px) {
-  .about-details{
-    width: 70vw;
-    margin: 0;
-    height: auto;
-  }
-  .education {
-   h3{
-    font-size: 3.5vw;
-   }
-   h4,p{
-    font-size: 2.5vw;
-    color: rgb(25, 23, 23);
-   }
-  }
-}
+// @media (max-width: 1165px) {
+
+// }
 @media (max-width: 650px) {
-  .about-details{
+  .about-details {
     width: 65vw;
   }
   .education {
-   h3{
-    font-size: 3vw;
-   }
-   h4,p{
-    font-size: 2vw;
-    color: rgb(25, 23, 23);
-   }
+    h3 {
+      font-size: 3vw;
+    }
+    h4,
+    p {
+      font-size: 2vw;
+      color: rgb(25, 23, 23);
+    }
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1200px) {
   .page-container {
     flex-direction: column-reverse;
     justify-content: center;
-    .text-zone{
+    .about-details {
+      width: 70vw;
+      margin: 0;
+      height: auto;
+    }
+    .education {
+      h3 {
+        font-size: 3.5vw;
+      }
+      h4,
+      p {
+        font-size: 2.5vw;
+        color: rgb(25, 23, 23);
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .page-container {
+    margin-left: 5rem;
+    .text-zone {
       width: 70vw;
       height: auto;
-      margin-top: 6rem;
+      // margin-top: 6rem;
     }
     h1 {
       font-size: 6vw;
@@ -253,10 +258,15 @@ p {
     h2,
     p {
       font-size: 2.5vw;
-    }.flat-button {
+    }
+    h4{
+      font-size: 2vw;
+      padding-right: 1rem;
+    }
+    .flat-button {
       font-size: 2vw;
     }
-    
+
     .stage-cube-cont {
       width: 80%;
       height: 40%;
@@ -264,7 +274,47 @@ p {
       text-align: center;
       overflow: hidden;
       .cubespinner {
-        padding: 3rem;
+        position: relative;
+        top: 15rem;
+        div {
+          width: 20vw;
+          height: 20vw;
+        }
+        .face1 {
+          transform: translateZ(10vw);
+        }
+
+        .face2 {
+          transform: rotateY(90deg) translateZ(10vw);
+        }
+
+        .face3 {
+          transform: rotateY(90deg) rotateX(90deg) translateZ(10vw);
+        }
+
+        .face4 {
+          transform: rotateY(180deg) rotateZ(-90deg) translateZ(10vw);
+        }
+
+        .face5 {
+          transform: rotateY(-90deg) rotateZ(90deg) translateZ(10vw);
+        }
+
+        .face6 {
+          transform: rotateX(-90deg) translateZ(10vw);
+        }
+
+        .face7 {
+          transform: rotateY(90deg) translateZ(10vw);
+        }
+
+        .face8 {
+          transform: rotateY(-90deg) rotateZ(90deg) translateZ(10vw);
+        }
+
+        .face9 {
+          transform: rotateX(-90deg) translateZ(10vw);
+        }
       }
     }
   }
@@ -274,21 +324,20 @@ p {
   .education {
     width: 60vw;
     height: auto;
-    h3{
+    h3 {
       font-size: 3vw;
-     }
-     h4{
+    }
+    h4 {
       font-size: 2vw;
-
-     }
+    }
   }
 }
 
-@media screen and (max-width: 1500px) {
-  .cubespinner {
-    transform-origin: 10vw 25vw 0;
-  }
-}
+// @media screen and (max-width: 1500px) {
+//   .cubespinner {
+//     transform-origin: 10vw 25vw 0;
+//   }
+// }
 
 // @media only screen and (max-width: 1000px) {
 //   .cubespinner {

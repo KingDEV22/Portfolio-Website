@@ -39,7 +39,7 @@ const Contact = () => {
           />
         </h1>
 
-        <p className='animate__animated animate__fadeIn'>
+        <p className='animate__animated animate__fadeInUp'>
           Thank You for visiting my portfolio website. <br />I am actively
           seeking opportunities as <strong>Software Engineer</strong>,{' '}
           <strong>Backend Developer</strong>,
@@ -50,10 +50,10 @@ const Contact = () => {
           <br />
           Feel free to get in touch with me!
         </p>
-        <div className="connect animate__animated animate__fadeIn">
+        <div className="connect animate__animated animate__fadeInUp">
           <h4 className='animate__animated animate__fadeIn'>Connect with me: </h4>
-          <h5 className='animate__animated animate__fadeIn'>kingsuk2k@gmail.com</h5>
-          <IoMdMail size={'2.5vw'} />
+          <h4 className='animate__animated animate__fadeIn' style={{padding: '1rem' ,color:'#ffff'}}>kingsuk2k@gmail.com</h4>
+          <IoMdMail size={'2vw'} />
         </div>
       </div>
       <div className="contact-img">

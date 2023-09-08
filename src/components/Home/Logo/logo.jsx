@@ -1,7 +1,7 @@
 import React from 'react'
 import LogoS from '../../../assets/images/profile.png'
 import './logo.scss'
-import { motion } from 'framer-motion'
+import 'animate.css'
 
 const Logo = () => {
   const svgVariants = {
@@ -12,10 +12,10 @@ const Logo = () => {
     },
   }
   return (
-    <motion.div className="logo-container" initial='hidden' animate='visible' variants={svgVariants}>
+    <div className="logo-container animate__animated animate__fadeInRight">
       <img src={LogoS} alt="JavaScript,  Developer" />
       
-    </motion.div>
+    </div>
   )
 }
 

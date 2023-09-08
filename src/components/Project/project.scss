@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+
+
 .project {
   display: flex;
   align-items: center;
@@ -8,7 +10,6 @@
 
   .wrapper {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     padding: 1vw;
@@ -131,14 +132,14 @@
 
 @media screen and (min-width: 650px) and (max-width: 1200px) {
   .project-details {
-    width: 80vw;
-    height: 65vw;
+    width: 70vw;
+    height: 60vw;
 
     .wrapper {
       justify-content: space-evenly;
       .project-card {
-        width: 30vw;
-        height: 40vw;
+        width: 25vw;
+        height: 30vw;
         border-radius: 5px;
         &::before {
           border-radius: 5px;
@@ -148,7 +149,7 @@
           object-fit: contain;
         }
         h3 {
-          font-size: 2.5vw;
+          font-size: 2vw;
         }
         .project-info {
           p {

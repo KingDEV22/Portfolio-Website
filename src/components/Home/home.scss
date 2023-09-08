@@ -8,6 +8,7 @@
   margin: 0 auto;
   height: 100%;
   width: 80%;
+  overflow: hidden;
   .text-zone {
     background: rgba(255, 255, 255, 0.168);
     box-shadow: 0 8px 32px 0 rgba(153, 155, 136, 0.601);
@@ -65,59 +66,39 @@ h1 {
 
 @media (max-width: 900px) {
   .page-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
     .text-zone {
       margin: 2rem;
-      width: 80vw;
+      width: 70vw;
       height: auto;
+      
     }
     h2,
     p {
-      font-size: 3vw;
+      font-size: 2vw;
+      letter-spacing: 1.5px;
+      padding-top: 1vw;
     }.flat-button {
-      font-size: 2.5vw;
+      font-size: 2vw;
     }
-    .logo-container{
-      width: 50vw;
-      height: 30vw;
-      margin-bottom: 3rem;
-      // border: 1px solid black;
-      img{
-        width: 20vw;
-        height: 30vw;
-      }
-    }
+    
   }
 }
 
-// @media (max-width: 500px) {
-//   .page-container {
-//     .text-zone {
-//       padding: 2rem;
-//       margin: 2rem 0;
-//       width: 60vw;
-//       height: 30vw;
-//     }
-//     h1 {
-//       font-size: 5vw;
-//       line-height: 5.5vw;
-//       letter-spacing: 4px;
-//     }
-//     h2,
-//     p {
-//       font-size: 1.5vw;
-//       margin-top: 0.5vw;
-//       font-weight: 400;
-//       font-family: sans-serif;
-//       letter-spacing: 3px;
-//       animation: fadeIn 1s 1s backwards;
-//     }
-//   }
-// }
+@media (max-width: 500px) {
+  .logo-container{
+    width: 60vw;
+    height: 50vw;
+    margin-bottom: 3rem;
+    background-position:center;
+    padding: 0 2.1rem;
+    img{
+      width: 40vw;
+      height: 50vw;
+      position: absolute;
+      bottom: 0.5px;
+    }
+  }
+}
 
 // @media only screen and (max-width: 500px) {
 //   .container {

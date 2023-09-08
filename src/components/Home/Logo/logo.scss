@@ -1,9 +1,11 @@
 .logo-container {
-    width: 50%;
+    width: 30vw;
+    height: 20vw;
     display: flex;
     justify-content: center;
-    padding-left:2rem;
+    padding:0;
     background-size: cover;
+    background-position: center;
     background-image: url('../../../assets/images/profile.svg');
     background-repeat: no-repeat;
     backdrop-filter: blur(20px);
