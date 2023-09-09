@@ -29,7 +29,11 @@
     margin-top: 0.5vw;
     font-weight: 600;
     font-family: sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+
+    strong{
+      color: #ffff;
+    }
   }
 }
 
@@ -58,7 +62,7 @@
 h1 {
   font-size: 3vw;
   line-height: 3.5vw;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   margin: 0;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;

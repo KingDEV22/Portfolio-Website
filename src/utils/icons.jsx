@@ -30,12 +30,13 @@ import Database from '../assets/images/database.png'
 import Stock from '../assets/images/stock.jpg'
 import CLI from '../assets/images/cli.jpg'
 import {
-  FaUser,
+  FaUserGraduate,
   FaGraduationCap,
   FaAmazon,
   FaTools,
   FaSchool,
   FaProjectDiagram,
+  FaUser,
 } from 'react-icons/fa'
 
 import { MdWork ,MdPermContactCalendar} from 'react-icons/md'
@@ -67,7 +68,7 @@ export const iconArray = [
 
 export const navLinks = [
   { icon: <FaUser />, name: 'about' },
-  { icon: <FaSchool />, name: 'education' },
+  { icon: <FaUserGraduate />, name: 'education' },
   { icon: <MdWork />, name: 'experience' },
   { icon: <FaTools />, name: 'skill' },
   { icon: <FaProjectDiagram />, name: 'project' },
@@ -115,12 +116,12 @@ export const projectsData = [
     title: 'Stock News Analysis',
     image: Stock,
     desc: `Built a sentiment analysis model that predicts the sentiment 
-      of daily scraped news articles.`,
+      of daily scraped indian stock news articles.`,
   },
   {
     title: 'CLI Tool',
     image: CLI,
-    desc: `Built a versatile cli tool with Bash and Python to perform various tasks.`,
+    desc: `Built a versatile tool with Bash and Python to perform various tasks from the command line.`,
   },
   {
     title: 'Food Delevery App',
@@ -150,9 +151,9 @@ export const persData = [
     date: 'Jan 2023 - Jun 2023',
     title: 'Support Engineer II Intern',
     subtitle: 'Amazon , India',
-    detailedText: `I contributed significantly to deploying diverse services within Amazon India's Just Walk Out Technology (JWO) 
+    detailedText: `I contributed significantly in deploying different services to AWS Services for Just Walk Out Technology (JWO) 
     store infrastructure, collaborated with cross-functional teams to troubleshoot 
-    and debugged errors, implemented automation script and optimised package.`,
+    and debugg errors, implemented automation scripts and optimised packages.`,
     icon: <FaAmazon />,
   },
 ]

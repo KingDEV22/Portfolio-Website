@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters/animateLetters'
 import './contact.scss'
 import { motion } from 'framer-motion'
-import { IoMdMail } from 'react-icons/io'
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -41,25 +41,20 @@ const Contact = () => {
 
         <p className="animate__animated animate__fadeInUp">
           Thank You for visiting my portfolio website. <br />I am actively
-          seeking opportunities as <strong>Software Engineer</strong>,{' '}
+          seeking opportunities as <strong>Software Engineer</strong>,
           <strong>Backend Developer</strong>,
           <strong> Full Stack Engineer</strong>. <br />
           I am dedicated in enhancing my skill set and adopting new technologies
           to make valuable contributions to your organization. Looking forward
           to hearing from you and exploring exciting opportunities together.
           <br />
-          Feel free to get in touch with me!
+          Feel free to get in touch with me! 
+          <br />
+          Connect: <span style={{color: '#ffff'}}>kingsuk2k@gmail.com </span> 
         </p>
-        <div className="connect animate__animated animate__fadeInUp">
-          <h4 className="animate__animated animate__fadeIn">Connect: </h4>
-          <h4
-            className="animate__animated animate__fadeIn"
-            style={{ padding: '1rem', color: '#ffff' }}
-          >
-            kingsuk2k@gmail.com
-          </h4>
-          <IoMdMail size={'2vw'} />
-        </div>
+        <Link to="/" className="flat-button">
+            HOME PAGE
+          </Link>
       </div>
       <div className="contact-img animate__animated animate__fadeIn">
         <motion.svg
