@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters/animateLetters'
-import { motion } from 'framer-motion'
 import './project.scss'
 import { iconArray } from '../../utils/icons'
 import 'animate.css'
