@@ -7,28 +7,25 @@ import {
   Html5Original,
   Css3Original,
   SpringOriginal,
-  FlaskOriginal,
-  ExpressOriginal,
   NodejsOriginal,
   ReactOriginal,
-  MysqlOriginal,
   PostgresqlOriginal,
   MongodbOriginal,
   AnacondaOriginal,
   JupyterOriginal,
   LinuxOriginal,
-  KotlinPlain,
-  AndroidstudioOriginal,
   DockerOriginal,
   GitOriginal,
+  AmazonwebservicesOriginal,
+  FastapiOriginal
 } from 'devicons-react'
 import FoodApp from '../assets/images/foodapp.png'
 import Portfolio from '../assets/images/portfolio.png'
 import Medical from '../assets/images/insurance.jpg'
 import Invoice from '../assets/images/invoice.png'
-import Database from '../assets/images/database.png'
+import Library from '../assets/images/library.jpeg'
 import Stock from '../assets/images/stock.jpg'
-import CLI from '../assets/images/cli.jpg'
+import Mental from '../assets/images/mental.png'
 import {
   FaUserGraduate,
   FaGraduationCap,
@@ -39,11 +36,10 @@ import {
   FaUser,
 } from 'react-icons/fa'
 
-import { MdWork ,MdPermContactCalendar} from 'react-icons/md'
+import { MdWork, MdPermContactCalendar } from 'react-icons/md'
 
 export const iconArray = [
   { name: 'C', component: COriginal },
-  { name: 'Bash', component: BashOriginal },
   { name: 'Java', component: JavaOriginal },
   { name: 'Python', component: PythonOriginal },
   { name: 'Html5', component: Html5Original },
@@ -51,19 +47,16 @@ export const iconArray = [
   { name: 'Javascript', component: JavascriptOriginal },
   { name: 'React', component: ReactOriginal },
   { name: 'Nodejs', component: NodejsOriginal },
-  { name: 'Express', component: ExpressOriginal },
   { name: 'Spring', component: SpringOriginal },
-  { name: 'Flask', component: FlaskOriginal },
-  { name: 'Mysql', component: MysqlOriginal },
+  { name: 'FastAPI', component: FastapiOriginal },
   { name: 'Postgresql', component: PostgresqlOriginal },
   { name: 'Mongodb', component: MongodbOriginal },
+  { name: 'AWS', component: AmazonwebservicesOriginal },
   { name: 'Git', component: GitOriginal },
   { name: 'Docker', component: DockerOriginal },
   { name: 'Anaconda', component: AnacondaOriginal },
   { name: 'Jupyter', component: JupyterOriginal },
   { name: 'Linux', component: LinuxOriginal },
-  { name: 'Kotlin', component: KotlinPlain },
-  { name: 'Android', component: AndroidstudioOriginal },
 ]
 
 export const navLinks = [
@@ -89,6 +82,18 @@ export const iconsphere = [
 
 export const projectsData = [
   {
+    title: 'MindSense',
+    image: Mental,
+    desc: `•Developed a FastAPI server for predicting mental health attributes from text inputs using Deep Learning`,
+    link: 'https://github.com/PixelPioneersDAO/Employee-Health-ML',
+  },
+  {
+    title: 'Library Manager',
+    image: Library,
+    desc: `Built a library management app with FastAPI`,
+    link: 'https://github.com/KingDEV22/library-management',
+  },
+  {
     title: 'Invoice Manager',
     image: Invoice,
     desc: `Developed a machine learning based web app to manage invoices and predict clear date of invoices.`,
@@ -108,20 +113,10 @@ export const projectsData = [
     link: 'https://github.com/KingDEV22/Medical-Price-Prediction',
   },
   {
-    title: 'Database',
-    image: Database,
-    desc: `Built a simple database from scratch using C.`,
-  },
-  {
     title: 'Stock News Analysis',
     image: Stock,
     desc: `Built a sentiment analysis model that predicts the sentiment 
       of daily scraped indian stock news articles.`,
-  },
-  {
-    title: 'CLI Tool',
-    image: CLI,
-    desc: `Built a versatile tool with Bash and Python to perform various tasks from the command line.`,
   },
   {
     title: 'Food Delevery App',

@@ -6,7 +6,7 @@ import Logo from './Logo/logo'
 import './home.scss'
 import 'animate.css'
 import {BsDownload} from 'react-icons/bs'
-import Resume from '../../assets/Kingsuk.pdf'
+import Resume from '../../assets/Kingsuk_Biswas.pdf'
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
