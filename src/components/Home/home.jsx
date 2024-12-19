@@ -5,31 +5,13 @@ import AnimatedLetters from '../AnimatedLetters/animateLetters'
 import Logo from './Logo/logo'
 import './home.scss'
 import 'animate.css'
-import {BsDownload} from 'react-icons/bs'
+import { BsDownload } from 'react-icons/bs'
 import Resume from '../../assets/Kingsuk_Biswas.pdf'
+
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
-  const nameArray = ['', 'K', 'i', 'n', 'g', 's', 'u', 'k']
-  const jobArray = [
-    'S',
-    'o',
-    'f',
-    't',
-    'w',
-    'a',
-    'r',
-    'e',
-    ' ',
-    'E',
-    'n',
-    'g',
-    'i',
-    'n',
-    'e',
-    'e',
-    'r',
-  ]
+  const personalInfo = "Hi,I'm Kingsuk,Software Engineer"
 
   useEffect(() => {
     return setTimeout(() => {
@@ -39,24 +21,13 @@ const Home = () => {
 
   return (
     <>
-      <div className=" page-container">
+      <div className="page-container">
         <div className="text-zone">
           <h1>
-            <span className={letterClass}>H</span>
-            <span className={`${letterClass} _12`}>i,</span>
-            <br />
-            <span className={`${letterClass} _13`}>I</span>
-            <span className={`${letterClass} _14`}>'m </span>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={nameArray}
-              idx={15}
-            />
-            <br />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={jobArray}
-              idx={22}
+              strArray={personalInfo.split('')}
+              idx={1}
             />
           </h1>
           <h2 className="animate__animated animate__bounceIn">Java | Python</h2>
@@ -78,9 +49,9 @@ const Home = () => {
             target="_blank"
             rel="noreferrer"
             className='flat-button'
-            style={{  marginLeft : '1rem'}}
+            style={{ marginLeft: '1rem' }}
           >
-            RESUME <BsDownload/>
+            RESUME <BsDownload />
           </a>
         </div>
         <Logo />
