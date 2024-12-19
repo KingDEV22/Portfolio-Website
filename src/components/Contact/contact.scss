@@ -2,6 +2,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
   h5,
   a {
     font-size: 1vw;
@@ -18,34 +19,37 @@
   display: flex;
   justify-content: center;
 }
+
 @media screen and (max-width: 500px) {
   .contact-page {
     justify-content: center;
     flex-direction: column;
     margin-left: 5rem;
+
     .text-zone {
       width: 60vw;
       height: auto;
       margin-top: 6rem;
     }
+
     h1 {
       font-size: 4vw;
       line-height: 2vw;
       letter-spacing: 4px;
     }
-    h4{
+
+    h4 {
       font-size: 2.5vw;
       margin: 0;
     }
+
     h2,
     p {
       margin-top: 1rem;
       letter-spacing: 1px;
     }
-    .flat-button {
-      font-size: 1.5vw;
-    }
-    .contact-img{
+
+    .contact-img {
       height: 70vw;
       width: 70vw;
     }

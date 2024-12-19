@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters/animateLetters'
 import Logo from './Logo/logo'
 import './home.scss'
@@ -8,16 +7,16 @@ import 'animate.css'
 import { BsDownload } from 'react-icons/bs'
 import Resume from '../../assets/Kingsuk_Biswas.pdf'
 
-const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
+const Home = ({ letterClass, setLetterClass }) => {
 
   const personalInfo = "Hi,I'm Kingsuk,Software Engineer"
 
   useEffect(() => {
-    return setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 4000)
-  }, [])
+    const timeout = setTimeout(() => {
+      setLetterClass('text-animate-hover');
+    }, 4000);
+    return () => clearTimeout(timeout);
+  }, [setLetterClass]);
 
   return (
     <>
@@ -30,7 +29,7 @@ const Home = () => {
               idx={1}
             />
           </h1>
-          <h2 className="animate__animated animate__bounceIn">Java | Python</h2>
+          <h2>Java | Python | JavaScipt</h2>
 
           <Link
             to="/about"
@@ -51,12 +50,11 @@ const Home = () => {
             className='flat-button'
             style={{ marginLeft: '1rem' }}
           >
-            RESUME <BsDownload />
+            <span> RESUME <BsDownload /></span>
           </a>
         </div>
         <Logo />
       </div>
-      <Loader type="line-spin-fade-loader" />
     </>
   )
 }

@@ -1,21 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import { iconsphere } from '../../utils/icons'
+import React, { useEffect } from 'react'
 import AnimatedLetters from '../AnimatedLetters/animateLetters'
 import './about.scss'
-import 'animate.css'
 import { Link } from 'react-router-dom'
-const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
+import RotateCube from './rotateCube'
+const About = ({ letterClass, setLetterClass }) => {
   useEffect(() => {
-    return setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-  }, [])
+    const timeout = setTimeout(() => {
+      setLetterClass('text-animate-hover');
+    }, 4000);
+    return () => clearTimeout(timeout);
+  }, [setLetterClass]);
 
   return (
     <>
       <div className="page-container">
-        <div className="text-zone ">
+        <div className="text-zone">
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
@@ -23,13 +22,13 @@ const About = () => {
               idx={15}
             />
           </h1>
-          <p className='animate__animated animate__fadeInUp'>
+          <p >
             I'm a software engineer with a B-Tech degree in Computer Science
             Engineering. I have done a six month internship at Amazon as Support
             Enginner II Intern where I learned about corporate culture and
             principles.
           </p>
-          <p className='animate__animated animate__fadeInDown'>
+          <p>
             I specialize in machine learning-driven web apps and microservices.
             Keeping up with tech trends is my priority. I'm eager to contribute
             to groundbreaking projects and explore tech's endless possibilities.
@@ -38,16 +37,7 @@ const About = () => {
             KNOW MORE
           </Link>
         </div>
-
-        <div className="stage-cube-cont">
-          <div className="cubespinner">
-            {iconsphere.map((item, ind) => (
-              <div className={`face${ind + 1}`} key={ind}>
-                {React.createElement(item, { size: '4vw' })}
-              </div>
-            ))}
-          </div>
-        </div>
+        <RotateCube />
       </div>
     </>
   )

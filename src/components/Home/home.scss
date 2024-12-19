@@ -26,7 +26,7 @@
 
   h2,
   p {
-    color: #3d3434;
+    color: #e9dfc6d7;
     font-size: 1.2vw;
     margin-top: 0.5vw;
     font-weight: 600;
@@ -39,27 +39,6 @@
   }
 }
 
-.flat-button {
-  border: 2px solid #000000;
-  color: #040404;
-  font-size: 0.9vw;
-  background: none;
-  font-weight: 400;
-  letter-spacing: 3px;
-  font-family: sans-serif;
-  text-decoration: none;
-  padding: 1vw 1vh;
-  border-radius: 5px;
-  margin-top: 1vw;
-  float: left;
-  animation: fadeIn 0.5s 0.5s backwards;
-  white-space: nowrap;
-
-  &:hover {
-    color: #b1b4bd;
-    border: 2px solid #b1b4bd;
-  }
-}
 
 h1 {
   font-size: 3vw;
@@ -86,9 +65,7 @@ h1 {
       padding-top: 1vw;
     }
 
-    .flat-button {
-      font-size: 2vw;
-    }
+
 
   }
 }

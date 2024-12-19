@@ -1,0 +1,82 @@
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font: 300 11px/1.4 'Helvetica Neue', sans-serif;
+  color: #d9e1be;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #7056cff4;
+  overflow: hidden;
+  display: block;
+}
+
+.flat-button {
+  border: 3px solid #b4b4b4c8;
+  color: #e9dfc6d7;
+  font-size: 0.9vw;
+  background: none;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-family: sans-serif;
+  text-decoration: none;
+  padding: 1vw 1vh;
+  border-radius: 5px;
+  margin-top: 1vw;
+  float: left;
+  white-space: nowrap;
+
+  &:hover {
+    color: #e8eaee;
+    border: 2px solid #f9f9f9;
+  }
+
+  /* Responsive Design */
+  @media screen and (max-width: 1200px) {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    margin-top: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    padding: 8px 12px;
+    margin-top: 0.8rem;
+    float: none;
+    /* Avoid floating issues on smaller screens */
+    text-align: center;
+    /* Center align for better look */
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    margin-top: 0.5rem;
+    width: 100%;
+    /* Make the button full width */
+    text-align: center;
+  }
+}
+
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+:root {
+  --animate-duration: 2s;
+  --animate-delay: 0.9s;
+}

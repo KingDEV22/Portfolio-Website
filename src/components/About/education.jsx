@@ -11,12 +11,12 @@ import { Link } from 'react-router-dom'
 export default function Education() {
   const [letterClass, setLetterClass] = useState('text-animate')
   const pfont = determineFontSize()
- function determineFontSize(){
-    if(window.innerWidth < 1166){
+  function determineFontSize() {
+    if (window.innerWidth < 1166) {
       return '2.5vw'
-    }else if( window.innerWidth >=1166 && window.innerWidth <1499){
+    } else if (window.innerWidth >= 1166 && window.innerWidth < 1499) {
       return '2vw'
-    }else{
+    } else {
       return '1vw'
     }
   }
@@ -30,16 +30,10 @@ export default function Education() {
 
   return (
     <div className="page-container">
-      <div className="about-details">
+      <div className="text-zone">
         <div className="education">
-          <motion.h1
-            initial={{ scale: 0 }}
-            animate={{ rotate: 360, scale: 1 }}
-            transition={{
-              type: 'spring',
-              stiffness: 260,
-              damping: 20,
-            }}
+          <h1
+
           >
             <AnimatedLetters
               letterClass={letterClass}
@@ -48,7 +42,7 @@ export default function Education() {
               }
               idx={15}
             />
-          </motion.h1>
+          </h1>
           <VerticalTimeline>
             {persData.slice(0, 2).map((data, ind) => (
               <VerticalTimelineElement
@@ -63,7 +57,7 @@ export default function Education() {
                 contentArrowStyle={{
                   borderRight: '7px solid  rgba(79, 78, 78, 0.744)',
                 }}
-                iconStyle={{ background: '#ffff', color:'#000000' }}
+                iconStyle={{ background: '#ffff', color: '#000000' }}
                 icon={data.icon}
               >
                 <h3 className="vertical-timeline-element-title">
