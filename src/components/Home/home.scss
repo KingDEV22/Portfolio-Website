@@ -24,10 +24,9 @@
     max-height: 93%;
   }
 
-  h2,
   p {
-    color: #e9dfc6d7;
-    font-size: 1.2vw;
+    color: #d0cece;
+    font-size: 1.5rem;
     margin-top: 0.5vw;
     font-weight: 600;
     font-family: sans-serif;
@@ -37,16 +36,64 @@
       color: #ffff;
     }
   }
+
+  .education,
+  .experience,
+  .skills {
+    width: 100%;
+    height: 80%;
+  }
+
+  .education,
+  .skills,
+  .experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .skills {
+    width: 90%;
+    height: 80%;
+  }
+
+  .button-container {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
+h1,
+h2,
+h3,
+h4 {
+  color: #66ffcc;
+  letter-spacing: 1.5px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2vw;
+}
+
+h3 {
+  font-size: 1.5vw;
+}
+
+h4 {
+  font-size: 1vw;
+}
 
 h1 {
   font-size: 3vw;
   line-height: 3.5vw;
-  letter-spacing: 1.5px;
-  margin: 0;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
+  color: #ff9966;
+
+
 }
 
 @media (max-width: 900px) {

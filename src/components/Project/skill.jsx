@@ -7,7 +7,6 @@ import { Container, Row, Col } from 'react-grid-system'
 import { Link } from 'react-router-dom'
 const Skill = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const skillLetters = ['S', 'k', 'i', 'l', 'l', 's']
   const pfont = window.innerWidth < 1000 ? '6vw' : '3vw'
   useEffect(() => {
     return setTimeout(() => {
@@ -17,11 +16,11 @@ const Skill = () => {
   return (
     <>
       <div className="page-container">
-        <div className="about-details">
+        <div className="text-zone skills">
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={skillLetters}
+              strArray={"Skills".split('')}
               idx={15}
             />
           </h1>
@@ -39,17 +38,13 @@ const Skill = () => {
                     }}
                   >
                     <span
-                      className={`animate__animated ${
-                        ind % 2 == 0
-                          ? 'animate__fadeInRight'
-                          : 'animate__fadeInLeft'
-                      } `}
+                      className='animate__animated animate__zoomIn'
                     >
                       {React.createElement(Icon.component, {
                         size: `${pfont}`,
                       })}
                     </span>
-                    <p class="animate__animated animate__fadeIn">{Icon.name}</p>
+                    <p className="animate__animated animate__zoomIn">{Icon.name}</p>
                   </div>
                 </Col>
               ))}

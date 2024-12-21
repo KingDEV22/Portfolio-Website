@@ -142,13 +142,31 @@ export const persData = [
     detailedText: `Sudhir Memorial Institute, Kolkata, West Bengal`,
     icon: <FaSchool />,
   },
+]
+
+export const expData = [
   {
     date: 'Jan 2023 - Jun 2023',
     title: 'Support Engineer II Intern',
     subtitle: 'Amazon , India',
-    detailedText: `I contributed significantly in deploying different services to AWS Services for Just Walk Out Technology (JWO) 
-    store infrastructure, collaborated with cross-functional teams to troubleshoot 
-    and debugg errors, implemented automation scripts and optimised packages.`,
+    icon: <FaAmazon />,
+  },
+  {
+    date: 'Nov 2023 - Feb 2024',
+    title: 'Product Support Engineer Intern',
+    subtitle: 'Scrut Automation , India',
+    icon: <FaAmazon />,
+  },
+  {
+    date: 'Feb 2024 - Apr 2024',
+    title: 'Product Support Engineer',
+    subtitle: 'Scrut Automation , India',
+    icon: <FaAmazon />,
+  },
+  {
+    date: 'Apr 2024 - Present',
+    title: 'Support Engineer II',
+    subtitle: 'Amazon , India',
     icon: <FaAmazon />,
   },
 ]

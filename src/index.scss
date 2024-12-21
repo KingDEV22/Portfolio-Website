@@ -5,18 +5,18 @@ html {
 
 body {
   margin: 0;
-  font: 300 11px/1.4 'Helvetica Neue', sans-serif;
-  color: #d9e1be;
+  // font: 300 11px/1.4 'Helvetica Neue', sans-serif;
+  // color: #d9e1be;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #7056cff4;
+  background: #181a3f;
   overflow: hidden;
-  display: block;
+  // display: block;
 }
 
 .flat-button {
-  border: 3px solid #b4b4b4c8;
-  color: #e9dfc6d7;
+  border: 3px solid #d0cece;
+  color: #d0cece;
   font-size: 0.9vw;
   background: none;
   font-weight: 600;
@@ -30,8 +30,8 @@ body {
   white-space: nowrap;
 
   &:hover {
-    color: #e8eaee;
-    border: 2px solid #f9f9f9;
+    color: rgb(213, 85, 85);
+    border: 3px solid rgb(213, 85, 85);
   }
 
   /* Responsive Design */
@@ -61,6 +61,16 @@ body {
   }
 }
 
+.hide-button {
+  border: 3px solid rgba(96, 95, 95, 0.862);
+  color: rgba(22, 22, 22, 0.855);
+  pointer-events: none;
+  /* Disables click events */
+  opacity: 0.5;
+  /* Makes the button appear less prominent */
+  cursor: not-allowed;
+  /* Changes the cursor to indicate non-interactivity */
+}
 
 @keyframes AnimateBG {
   0% {

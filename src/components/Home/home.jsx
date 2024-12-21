@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import AnimatedLetters from '../AnimatedLetters/animateLetters'
 import Logo from './Logo/logo'
@@ -7,8 +7,9 @@ import 'animate.css'
 import { BsDownload } from 'react-icons/bs'
 import Resume from '../../assets/Kingsuk_Biswas.pdf'
 
-const Home = ({ letterClass, setLetterClass }) => {
+const Home = () => {
 
+  const [letterClass, setLetterClass] = useState('text-animate')
   const personalInfo = "Hi,I'm Kingsuk,Software Engineer"
 
   useEffect(() => {
@@ -29,7 +30,7 @@ const Home = ({ letterClass, setLetterClass }) => {
               idx={1}
             />
           </h1>
-          <h2>Java | Python | JavaScipt</h2>
+          <p>Java | Python | JavaScipt</p>
 
           <Link
             to="/about"

@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters/animateLetters'
-// import { motion } from 'framer-motion'
 import './project.scss'
 import { projectsData } from '../../utils/icons'
 import { Link } from 'react-router-dom'
-import { motion} from 'framer-motion'
 import 'animate.css'
 const Project = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -17,12 +15,11 @@ const Project = () => {
     const screenWidth = window.innerWidth
     if (screenWidth <= 650) {
       return 1 // Display one project card for screen width <= 550px
-    }   else if (screenWidth <= 1200) {
+    } else if (screenWidth <= 1200) {
       return 2 // Display two project cards for screen width <= 1000px
     } else {
       return 3 // Display three project cards for larger screens
     }
-  
   }
 
   const handleNextClick = () => {
@@ -31,6 +28,9 @@ const Project = () => {
   const handlePrevClick = () => {
     setDisplayStart(displayStart - itemsPerPage)
   }
+  console.log(displayStart)
+  console.log(itemsPerPage)
+  console.log("current" + displayStart)
   useEffect(() => {
     const handleResize = () => {
       // Update itemsPerPage based on the current screen width
@@ -53,7 +53,7 @@ const Project = () => {
   return (
     <>
       <div className="page-container">
-        <div className="about-details project-details">
+        <div className="text-zone experience">
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
@@ -84,14 +84,15 @@ const Project = () => {
           </div>
 
           <div className="button-container">
-            {displayStart !== 0 && (
-              <button className="flat-button" onClick={handlePrevClick}>
-                MOVE BACK
-              </button>
-            )}
-            {displayStart !== 6 ? (
+            <button
+              className={displayStart === 0 ? "flat-button hide-button" : "flat-button"}
+              disabled={displayStart === 0}
+              onClick={handlePrevClick}>
+              MOVE BACK
+            </button>
+            {displayStart <= projectsData.length - itemsPerPage ? (
               <button className="flat-button" onClick={handleNextClick}>
-                {displayStart > 0 ? 'MOVE NEXT' : 'KNOW MORE'}
+                MOVE NEXT
               </button>
             ) : (
               <Link to="/contact" className="flat-button">
